@@ -1,6 +1,7 @@
 # terraform-eks
 
-![My Image](./EKS CLUSTER USING TERRAFORM.png)
+![My Image](https://github.com/Bazith1/Terraform-EKS-Project/blob/main/EKS%20CLUSTER%20USING%20TERRAFORM.png)
+
 
 
 ### Install AWS CLI 
