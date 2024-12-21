@@ -29,3 +29,20 @@ module "eks" {
   }
 }
 
+
+module "fargate_profile" {
+  source = "terraform-aws-modules/eks/aws//modules/fargate-profile"
+
+  name         = "separate-fargate-profile"
+  cluster_name = local.cluster_name
+
+  subnet_ids = module.vpc.private_subnets
+  selectors = [{
+    namespace = "kube-system"
+  }]
+
+  tags = {
+    Environment = "dev"
+    Terraform   = "true"
+  }
+}
